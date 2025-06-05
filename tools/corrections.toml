@@ -1,0 +1,19 @@
+[corrections]
+entries = [
+    { er = 'textinput_habilte = TextInput()', cr = 'textinput_habilte = Input(input_type="number")' },
+    { er = 'textinput_habilte.attr_class = "TextInput"', cr = 'textinput_habilte.attr_class = "Input"' },
+
+    { er = 'textinput_endurance = TextInput()', cr = 'textinput_endurance = Input(input_type="number")' },
+    { er = 'textinput_endurance.attr_class = "TextInput"', cr = 'textinput_endurance.attr_class = "Input"' },
+
+    { er = 'textinput_chance = TextInput()', cr = 'textinput_chance = Input(input_type="number")' },
+    { er = 'textinput_chance.attr_class = "TextInput"', cr = 'textinput_chance.attr_class = "Input"' },
+
+    { er = 'textinput_habilte_monstre = TextInput()', cr = 'textinput_habilte_monstre = Input(input_type="number")' },
+    { er = 'textinput_habilte_monstre.attr_class = "TextInput"', cr = 'textinput_habilte_monstre.attr_class = "Input"' },
+
+    { er = 'textinput_endurance_monstre = TextInput()', cr = 'textinput_endurance_monstre = Input(input_type="number")' },
+    { er = 'textinput_endurance_monstre.attr_class = "TextInput"', cr = 'textinput_endurance_monstre.attr_class = "Input"' }
+]
+
+#    { er = 'old', cr = 'niou' },

@@ -1,16 +1,8 @@
 import ldvelh_gui as gui
 import random
+import remi.gui as remigui
 
-def monkeypatch():
-    """gui.LDVELH_gui.instances = []
-    def __init__(self, *args, **kwargs):
-        gui.LDVELH_gui.instances.append(self)
-        print("\nLDVELH_gui instances n°"+str(len(gui.LDVELH_gui.instances)))
-        print(gui.LDVELH_gui.instances)
-        if not 'editing_mode' in kwargs.keys():
-            super(gui.LDVELH_gui, self).__init__(*args, static_file_path={'my_res':'./res/'})
-    gui.LDVELH_gui.__init__=__init__"""
-    
+def monkeypatch(): 
     def get_widget(self):
         # dictionnaire pour accès simple aux widgets
         self.widget={"textinput_habilte":self.vbox0.children["hbox0"].children["textinput_habilte"],
@@ -97,7 +89,7 @@ def monkeypatch():
                 joueur.endurance+=1
                 joueur.write_gui(self._END)
         else:
-            self.console_write(f"Vous êtes malchanceux !({joueur.dernier_de} > {joueur.chance}")
+            self.console_write(f"Vous êtes malchanceux ! ({joueur.dernier_de} > {joueur.chance})")
             if self.vainqueur == joueur:
                 self.console_write(f"La blessure infligée était une écorchure (endurance de {monstre.name} {monstre.endurance}->{monstre.endurance+1})")
                 monstre.endurance+=1
@@ -129,8 +121,8 @@ class Monstre():
         self.g=gui #g instance of gui
     def read_gui(self):
         try:
-            self.habilete=int(self.g.widget["textinput_habilte_monstre"].get_text())
-            self.endurance=int(self.g.widget["textinput_endurance_monstre"].get_text())
+            self.habilete=int(self.g.widget["textinput_habilte_monstre"].get_value())
+            self.endurance=int(self.g.widget["textinput_endurance_monstre"].get_value())
         except ValueError:
             self.g.console_write(f"{self.name}:erreur de saisie")
             raise ValueError
@@ -144,9 +136,9 @@ class Monstre():
         self.FA=self.habilete+self.de_2D6()
     def write_gui(self,cible =6):
         if 2 & cible :
-            self.g.widget["textinput_habilte_monstre"].set_text(str(self.habilete))
+            self.g.widget["textinput_habilte_monstre"].set_value(str(self.habilete))
         if 4 & cible :
-            self.g.widget["textinput_endurance_monstre"].set_text(str(self.endurance))
+            self.g.widget["textinput_endurance_monstre"].set_value(str(self.endurance))
     def test_life(self)->bool:
         if self.endurance <=0:
             self.g.console_write(f"{self.name} est mort.")
@@ -161,19 +153,19 @@ class Joueur(Monstre):
         self.chance:int=0
     def read_gui(self):
         try:
-            self.habilete=int(self.g.widget["textinput_habilte"].get_text())
-            self.endurance=int(self.g.widget["textinput_endurance"].get_text())
-            self.chance=int(self.g.widget["textinput_chance"].get_text())
+            self.habilete=int(self.g.widget["textinput_habilte"].get_value())
+            self.endurance=int(self.g.widget["textinput_endurance"].get_value())
+            self.chance=int(self.g.widget["textinput_chance"].get_value())
         except ValueError:
             self.g.console_write(f"{self.name}:erreur de saisie")
             raise ValueError
     def write_gui(self, cible =14):
         if 2 & cible:
-            self.g.widget["textinput_habilte"].set_text(str(self.habilete))
+            self.g.widget["textinput_habilte"].set_value(str(self.habilete))
         if 4 & cible:
-            self.g.widget["textinput_endurance"].set_text(str(self.endurance))
+            self.g.widget["textinput_endurance"].set_value(str(self.endurance))
         if 8 & cible:
-            self.g.widget["textinput_chance"].set_text(str(self.chance))
+            self.g.widget["textinput_chance"].set_value(str(self.chance))
 
 
 def main():

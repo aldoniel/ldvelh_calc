@@ -70,15 +70,15 @@ class LDVELH_gui(App):
         label1.text = "habileté"
         label1.variable_name = "label1"
         hbox0.append(label1,'label1')
-        textinput_habilte = TextInput()
-        textinput_habilte.attr_class = "TextInput"
+        textinput_habilte = Input(input_type="number")
+        textinput_habilte.attr_class = "Input"
         textinput_habilte.attr_editor_newclass = False
         textinput_habilte.attr_maxlength = "3"
         textinput_habilte.css_height = "20px"
         textinput_habilte.css_order = "-1"
         textinput_habilte.css_position = "static"
         textinput_habilte.css_top = "20px"
-        textinput_habilte.css_width = "5%"
+        textinput_habilte.css_width = "10%"
         textinput_habilte.text = ""
         textinput_habilte.variable_name = "textinput_habilte"
         hbox0.append(textinput_habilte,'textinput_habilte')
@@ -89,19 +89,19 @@ class LDVELH_gui(App):
         label2.css_order = "-1"
         label2.css_position = "static"
         label2.css_top = "20px"
-        label2.css_width = "10%"
+        label2.css_width = "15%"
         label2.text = "endurance"
         label2.variable_name = "label2"
         hbox0.append(label2,'label2')
-        textinput_endurance = TextInput()
-        textinput_endurance.attr_class = "TextInput"
+        textinput_endurance = Input(input_type="number")
+        textinput_endurance.attr_class = "Input"
         textinput_endurance.attr_editor_newclass = False
         textinput_endurance.attr_maxlength = "3"
         textinput_endurance.css_height = "20px"
         textinput_endurance.css_order = "-1"
         textinput_endurance.css_position = "static"
         textinput_endurance.css_top = "20px"
-        textinput_endurance.css_width = "5%"
+        textinput_endurance.css_width = "10%"
         textinput_endurance.text = ""
         textinput_endurance.variable_name = "textinput_endurance"
         hbox0.append(textinput_endurance,'textinput_endurance')
@@ -116,15 +116,15 @@ class LDVELH_gui(App):
         label3.text = "chance"
         label3.variable_name = "label3"
         hbox0.append(label3,'label3')
-        textinput_chance = TextInput()
-        textinput_chance.attr_class = "TextInput"
+        textinput_chance = Input(input_type="number")
+        textinput_chance.attr_class = "Input"
         textinput_chance.attr_editor_newclass = False
         textinput_chance.attr_maxlength = "3"
         textinput_chance.css_height = "20px"
         textinput_chance.css_order = "-1"
         textinput_chance.css_position = "static"
         textinput_chance.css_top = "20px"
-        textinput_chance.css_width = "5%"
+        textinput_chance.css_width = "10%"
         textinput_chance.text = ""
         textinput_chance.variable_name = "textinput_chance"
         hbox0.append(textinput_chance,'textinput_chance')
@@ -165,15 +165,15 @@ class LDVELH_gui(App):
         label5.text = "habileté"
         label5.variable_name = "label5"
         hbox1.append(label5,'label5')
-        textinput_habilte_monstre = TextInput()
-        textinput_habilte_monstre.attr_class = "TextInput"
+        textinput_habilte_monstre = Input(input_type="number")
+        textinput_habilte_monstre.attr_class = "Input"
         textinput_habilte_monstre.attr_editor_newclass = False
         textinput_habilte_monstre.attr_maxlength = "3"
         textinput_habilte_monstre.css_height = "20px"
         textinput_habilte_monstre.css_order = "-1"
         textinput_habilte_monstre.css_position = "static"
         textinput_habilte_monstre.css_top = "20px"
-        textinput_habilte_monstre.css_width = "5%"
+        textinput_habilte_monstre.css_width = "10%"
         textinput_habilte_monstre.text = ""
         textinput_habilte_monstre.variable_name = "textinput_habilte_monstre"
         hbox1.append(textinput_habilte_monstre,'textinput_habilte_monstre')
@@ -188,15 +188,15 @@ class LDVELH_gui(App):
         label6.text = "endurance"
         label6.variable_name = "label6"
         hbox1.append(label6,'label6')
-        textinput_endurance_monstre = TextInput()
-        textinput_endurance_monstre.attr_class = "TextInput"
+        textinput_endurance_monstre = Input(input_type="number")
+        textinput_endurance_monstre.attr_class = "Input"
         textinput_endurance_monstre.attr_editor_newclass = False
         textinput_endurance_monstre.attr_maxlength = "3"
         textinput_endurance_monstre.css_height = "20px"
         textinput_endurance_monstre.css_order = "-1"
         textinput_endurance_monstre.css_position = "static"
         textinput_endurance_monstre.css_top = "20px"
-        textinput_endurance_monstre.css_width = "5%"
+        textinput_endurance_monstre.css_width = "10%"
         textinput_endurance_monstre.text = ""
         textinput_endurance_monstre.variable_name = "textinput_endurance_monstre"
         hbox1.append(textinput_endurance_monstre,'textinput_endurance_monstre')
